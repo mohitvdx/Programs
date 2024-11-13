@@ -1,3 +1,0 @@
-/Users/mohitverma/Projects/Programs/codeforces/cmake-build-debug/CMakeFiles/codeforces.dir
-/Users/mohitverma/Projects/Programs/codeforces/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/mohitverma/Projects/Programs/codeforces/cmake-build-debug/CMakeFiles/rebuild_cache.dir

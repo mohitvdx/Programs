@@ -18,13 +18,12 @@ Welcome to my competitive programming repository! This repo tracks my learning a
 ```plaintext
 ├── Codeforces
 │   ├── Contests
-│   │   └── ContestID_ProblemID.cpp         # Organized by contest ID and problem ID
-│   └── Learnings.md                        # Key insights and strategies from contests
+│   │   └── ContestID_ProblemID.cpp        # Key insights and strategies from contests
+│   └── Topics                     
 │
 ├── LeetCode
-│   ├── Easy
-│   ├── Medium
-│   └── Hard                                # Solutions by difficulty with comments
+|  ├── Contests
+│  |-- Questions
 │
 ├── LearningNotes                           # Topic-based learning notes and summaries
 │   ├── Data_Structures.md
