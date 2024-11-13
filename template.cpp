@@ -6,8 +6,7 @@ using namespace std;
 
 signed main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL); // fast IO
+    ios::sync_with_stdio(false); cin.tie(NULL); // fast IO
 
     // int t;
     // cin>>t;
