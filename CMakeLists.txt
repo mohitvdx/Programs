@@ -21,4 +21,5 @@ add_executable(codeforces
     cpp_basics/remainder.h
     cpp_basics/template.cpp
     cpp_basics/threeNumbers.cpp
-    template.cpp)
+    template.cpp
+        "level 1/power.cpp")
