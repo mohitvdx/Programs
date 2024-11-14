@@ -1,5 +1,4 @@
-## Competitive Programming Journey 
-
+## Competitive Programming
 Welcome to my competitive programming repository! This repo tracks my learning and problem-solving on [Codeforces](https://codeforces.com/profile/mohitvdx) and [LeetCode](https://leetcode.com/u/mohitvdx/).
 
 ## Goals

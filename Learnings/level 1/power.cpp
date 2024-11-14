@@ -21,9 +21,12 @@ int power(int a, int b){
 
 signed main(){
 
-    cout<<power(3,7);
+    cout<<power(2,60); //changes 60 operations to 6 operations
+    //vs
+    // cout<<pow(2,60);
 
 }
 
 
 //this method of finding the power takes a time complexity of O(log n)
+// this changes a code that takes 10^9 operations to 30 operation 
