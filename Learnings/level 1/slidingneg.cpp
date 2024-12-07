@@ -16,16 +16,7 @@ signed main()
     // int t;
     // cin>>t;
     // while(t--){
-        int a=10;
-        int b = 23;
-
-        a++;
-        b--;
-
-        a=a+b;
-        
-
-        cout<<a<<'\n';
-        cout<<b<<'\n';
+        ///using deque
+    
     // }
 }

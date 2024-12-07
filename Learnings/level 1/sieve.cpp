@@ -8,7 +8,7 @@ const int MOD = 1e9 + 7;
 const int INF = LLONG_MAX >> 1;
 
 void sieve(bool primes[], int n){
-    // bool primes[n+1];
+    bool primes[n+1];
     fill(primes, primes+n+1, true);
     // fill is used to fill a default value in a container
     // fill ( iterator begin, iterator end, default value);

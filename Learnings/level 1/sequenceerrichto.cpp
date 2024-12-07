@@ -23,7 +23,7 @@ signed main()
     for(int i=0; i<=n-k;i++){
         int count=0;
         for(int j = i; j<=n+k-1; j++){
-            if((s[i]==s[j])){
+            if(s[i]==s[j]){
                 count++;
             }else{
                 break;
