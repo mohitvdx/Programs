@@ -36,4 +36,13 @@ Welcome to my competitive programming repository! This repo tracks my learning a
 - **Data Structures:** Arrays, Linked Lists, Trees, Graphs, etc.
 - **Algorithms:** Sorting, Searching, Dynamic Programming, and more.
 
+## Algorithms
+ - https://cp-algorithms.com
+ - [cp handbook](https://cses.fi/book/book.pdf)
+
+
+
+## Blogs
+ - [Effective Practice](https://codeforces.com/blog/entry/116371)
+
 --- 
