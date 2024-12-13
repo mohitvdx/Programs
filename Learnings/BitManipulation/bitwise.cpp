@@ -16,6 +16,6 @@ signed main(){
     // int t;
     // cin>>t;
     // while(t--){
-        
+        cout<<0b010101110<<'\n';
     // }
 }

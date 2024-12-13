@@ -1,6 +1,6 @@
 // submitted by Mohit Verma "mohitvdx"
 
-// problem:
+// problem: generate all the paths, when left, right, down, up all are allowed and print the possible paths
 
 #include <bits/stdc++.h>
 
@@ -10,6 +10,7 @@ using namespace std;
 const int MOD = 1e9 + 7;
 const int INF = LLONG_MAX >> 1;
 
+int count1=0;
 int di[] = {0,1,0,-1};
 int dj[] = {1,0,-1,0};
 string s = "RDLU";
@@ -25,6 +26,7 @@ void generate(int i, int j, int n, int m, vector < vector < int > > & arr, strin
 
     if (i == n - 1 && j == m - 1) {
         cout << path << '\n';
+        count1++;
         return;
     }
 
@@ -38,17 +40,13 @@ void generate(int i, int j, int n, int m, vector < vector < int > > & arr, strin
             path.pop_back();
         }
     }
-    //un marking the block 
+    //un marking the block (backtracking)
     arr[i][j] = 0;
 }
 
 signed main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL); // fast IO
+    ios::sync_with_stdio(false); cin.tie(NULL); // fast IO
 
-    // int t;
-    // cin>>t;
-    // while(t--){
     int n, m;
     cin >> n >> m;
     vector < vector < int > > arr(n, vector < int > (m, 0));
@@ -64,12 +62,39 @@ signed main() {
     } else {
         cout << "No valid paths available." << '\n';
     }
+
+    cout<<"Total number of paths possible: "<<count1<<'\n';
     return 0;
-    // }
+
 }
+
+// TC: O(2^(NxM))
+// SC: O(N+M)
 
 // 3
 // 3
 // 0 0 0
 // 1 0 0
 // 0 0 0
+
+// 00010100101
+// 10101000101
+// 01010100101
+// 11001001000
+// 10101001010
+// 10000100000
+// 10000000000
+// 10001000000
+// 10100100000
+// 10000000000
+// 00000001000
+
+// 8 8
+// 0 0 0 0 0 1 0 0
+// 1 0 1 0 0 0 0 0
+// 0 1 0 1 0 1 0 0 
+// 1 1 0 0 0 0 0 1 
+// 1 0 1 0 1 0 0 1 
+// 1 0 0 0 0 1 0 0 
+// 1 0 0 0 0 0 0 0 
+// 1 0 0 0 1 0 0 0 
