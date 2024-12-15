@@ -1,5 +1,4 @@
 // submitted by Mohit Verma "mohitvdx"
-
 // problem: 
 
 #include <bits/stdc++.h>
@@ -16,9 +15,17 @@ signed main(){
     // int t;
     // cin>>t;
     // while(t--){
-        cout<<(0b010101110<<1)<<'\n';
-        cout<<(0b010101110)<<'\n';
-        cout<<(0b010101110>>1)<<'\n';
-        cout<<(0b010101110>>2)<<'\n';
+        int n,q;
+        cin>>n>>q;
+        unordered_map<int,int> umap;
+        while(q--){
+            int z,x;
+            cin>>z>>x;
+            if(z==1){
+                umap[x]++;
+            }else if(z==2){
+                cout<<umap[x]<<'\n';
+            }
+        }
     // }
 }
