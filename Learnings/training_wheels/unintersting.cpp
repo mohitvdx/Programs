@@ -1,6 +1,6 @@
 // submitted by Mohit Verma "mohitvdx"
 
-// problem: 
+// problem: https://codeforces.com/contest/2050/problem/C
 
 #include <bits/stdc++.h>
 #define int long long
