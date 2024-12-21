@@ -17,21 +17,18 @@ signed main(){
     // while(t--){
         int n,m;
         cin>>n>>m;
-        vector<int> a(n);
-        for(int i =0; i<n; i++){
-            cin>>a[i];
+        vector<int> vec(n);
+        for(int i=0; i<n; i++){
+            cin>>vec[i];
         }
 
-        sort(a.begin(),a.end());
+        sort(vec.begin(),vec.end());
 
-        int x= -1*m;
-
-        for(int i =0; i<n; i++,x++){
-            if(a[i]!=x){
-               
+        for(int i=-1*m, j=0;i<m;i++,j++){
+            if(vec[j]>i){
+                cout<<i<<'\n';
                 break;
             }
         }
-         cout<<x<<'\n';
     // }
 }

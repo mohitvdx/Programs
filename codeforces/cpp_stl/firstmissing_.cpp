@@ -22,16 +22,15 @@ signed main(){
             cin>>a[i];
         }
 
-        sort(a.begin(),a.end());
+        set<int> s(a.begin(),a.end());
 
-        int x= -1*m;
-
-        for(int i =0; i<n; i++,x++){
-            if(a[i]!=x){
-               
-                break;
+        for(int i=-m; i<=m; i++){
+            if(s.find(i)==s.end()){
+                cout<<i<<'\n';
+                return 0;
             }
         }
-         cout<<x<<'\n';
+
+
     // }
 }
