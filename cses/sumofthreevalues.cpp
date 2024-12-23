@@ -9,35 +9,41 @@ using namespace std;
 const int MOD = 1e9 + 7;
 const int INF = LLONG_MAX >> 1;
 
-signed main(){
-    ios::sync_with_stdio(false); cin.tie(NULL); // fast IO
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL); // fast IO
 
     // int t;
     // cin>>t;
     // while(t--){
-        int n,t;
-        cin>>n>>t;
-        vector<int> a(n);
-        
-        for(int i=0; i<n;i++){
-            cin>>a[i];
-        }
+    int n, t;
+    cin >> n >> t;
+    vector < pair < int, int >> a(n);
 
-        map<int,int> mpp;
+    for (int i = 0; i < n; i++) {
+        cin >> a[i].first;
+        a[i].second = i + 1;
+    } // stored the indexes
 
-        for(int i=0; i<n-1; i++){
-            for(int j=1; j<n; j++){
-                int remaining = t-(a[i]+a[j]);
-                if(mpp.find(remaining)!=mpp.end()){
-                    cout<<i+1<<" "<<mpp[remaining]+1<<" "<<j+1<<'\n';
-                    return 0;
-                }
-                mpp[a[j]]=j;
+    sort(a.begin(), a.end());   // sort
+
+    for (int i = 0; i < n; i++) {
+        int remaining = t - a[i].first;
+        for (int j = i + 1, k = n - 1; j < k; j++) {
+            while (a[j].first + a[k].first > remaining) { //shifting k to the left 
+                k--;
+            }
+            if (j < k && a[j].first + a[k].first == remaining) {
+                cout << a[i].second << " " << a[j].second << " " << a[k].second;
+                return 0;
             }
         }
+    }
 
-        cout<<"IMPOSSIBLE"<<'\n';
 
-        
+
+    cout << "IMPOSSIBLE" << '\n';
+
+
     // }
 }
