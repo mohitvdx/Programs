@@ -43,7 +43,7 @@
         }
         cout<<count<<'\n';
         }
-    }// this isnt right
+    }// this isnt right     
 
     // 4
     // 7
