@@ -20,19 +20,34 @@ signed main(){
 
         vector<int> ans;
 
-        ans.push_back(1);
+        ans.push_back(1);   // check for 1
 
-        if(n>=3 || d%3==0){
+        if(n>=3 || d%3==0){ //check for 3
             ans.push_back(3);
         }
-        if(d%5==0){
+        if(d%5==0){         //check for 5
             ans.push_back(5);
         }
-        if(n>=6){
+        if(n>=3){           //check for 7
              ans.push_back(7);
+        }else{
+            if(d%7==0){
+                ans.push_back(7);
         }
-         if(n>=6 || d%9==0){
+        }
+
+        if(n>=6 || d%9==0){ //check for 9
             ans.push_back(9);
+        }else if(n<6){
+            if(n==1 || n==2){
+            if(d%9==0){
+                  ans.push_back(9);   
+                }
+            }else {
+                if(d%3==0){
+                  ans.push_back(9);   
+                }
+            }
         }
 
         for(auto k:ans){
