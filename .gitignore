@@ -5,3 +5,12 @@ cmake-build-debug
 
 CMakeLists.txt
 
+# Ignore all executable files
+*.exe
+*.out
+*.a
+*.o
+*.so
+*.dll
+*.dylib
+*.bin
