@@ -23,7 +23,7 @@ signed main(){
         }else if(n%4==0){
             cout<<"Even"<<'\n';
         }else{
-            cout<<"Same"<<'\n';
+              cout<<"Same"<<'\n';
         }
     }
 }

@@ -12,18 +12,16 @@ const int INF = LLONG_MAX >> 1;
 signed main(){
     ios::sync_with_stdio(false); cin.tie(NULL); // fast IO
 
-    int t;
-    cin>>t;
-    while(t--){
-        int n;
-        cin>>n;
+    string s;
+    cin>>s;
 
-        if((n%2)!=0){
-            cout<<"Odd"<<'\n';
-        }else if(n%4==0){
-            cout<<"Even"<<'\n';
-        }else{
-            cout<<"Same"<<'\n';
-        }
+    int sizey=s.size();
+    int n=sizey;
+
+    vector<int> a;
+    for(int i=0; i<n; i++){
+        a.push_back(s[i]-'0');
     }
+
+    
 }

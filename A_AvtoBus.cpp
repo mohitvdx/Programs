@@ -15,15 +15,13 @@ signed main(){
     int t;
     cin>>t;
     while(t--){
-        int n;
-        cin>>n;
+        int n; cin>>n;
 
-        if((n%2)!=0){
-            cout<<"Odd"<<'\n';
-        }else if(n%4==0){
-            cout<<"Even"<<'\n';
+        if(n%2==1 || n<4){
+            cout<<-1<<'\n';
         }else{
-            cout<<"Same"<<'\n';
+            n/=2;
+            cout<< (n+3-1)/3 << " " << n/2 <<'\n';
         }
     }
 }

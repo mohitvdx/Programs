@@ -15,15 +15,19 @@ signed main(){
     int t;
     cin>>t;
     while(t--){
-        int n;
-        cin>>n;
+        int n; cin>>n;
 
-        if((n%2)!=0){
-            cout<<"Odd"<<'\n';
-        }else if(n%4==0){
-            cout<<"Even"<<'\n';
+        if(n%2!=0){
+            cout<<"YES"<<'\n';
         }else{
-            cout<<"Same"<<'\n';
+           while(n%2==0){
+            n/=2;
+           }
+           if(n>1){
+              cout<<"YES"<<'\n';
+           }else{
+              cout<<"NO"<<'\n';
+           }
         }
     }
 }
