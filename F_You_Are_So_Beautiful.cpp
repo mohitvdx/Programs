@@ -34,7 +34,7 @@ signed main() {
             last_seen[arr[i]] = i; // Always update the last occurrence
         }
 
-        for (const auto& [value, index] : last_seen) {
+        for (const auto& [value, index] : last_seen) {  //array dereferencing
             last_indices.insert(index); // Add to the set of last occurrences
         }
 
