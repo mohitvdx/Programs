@@ -54,4 +54,7 @@ so why did i use, sort with unique here ... well unique only works on consecutiv
 ==> gives time limit exceeded using set
 c   execmdkm ==> excmdkem
 1+  6
+
+
+had to use precomputation along with the set to get the answer in acceptable time limit 
 */
