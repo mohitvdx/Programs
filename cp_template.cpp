@@ -1,4 +1,4 @@
-// submitted by Mohit Verma "mohitvdx"
+// Mohit Verma "mohitvdx"
 // problem: 
 
 #include <bits/stdc++.h>
@@ -9,12 +9,19 @@ using namespace std;
 const int MOD = 1e9 + 7;
 const int INF = LLONG_MAX >> 1;
 
+void solve(){
+    
+}
+
 signed main(){
     ios::sync_with_stdio(false); cin.tie(NULL); // fast IO
 
-    // int t;
-    // cin>>t;
+    // int t; cin>>t;
     // while(t--){
-        
+        solve();
     // }
 }
+
+/*
+
+*/
