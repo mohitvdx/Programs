@@ -15,36 +15,41 @@ void solve(){
     
     for(int i=0; i<n; i++) cin>>a[i];
 
-    if(n%2!=0){
+    if(n%2){
         cout<<"NO"<<'\n';
         return;
     }
     
 
     sort(a.begin(), a.end());
-    int mini = a[0];
-    a.pop_front();
 
-    deque<int> ans(n);
-    ans.push_back(a[n-2]);
-    a.pop_back();
-
-    for(int i=0; a.size()>0; i++){
+    vector<int> ans(n);
+    int j=0;
+    int k=n/2;
+    for(int i=0; i<n; i++){
         if(i%2==0){
-            ans.push_front(a.front());
-            a.pop_front();
+            ans[i]=a[j++];
         }else{
-            ans.push_front(a.back());
-            a.pop_back();
+            ans[i]=a[k++];
         }
     }
-    a.push_front(mini);
-
+    
+    for(int i=1; i<n-1; i++){
+        if(ans[i]>ans[i-1]&&ans[i]>ans[i+1]){
+            continue;
+        }else if(ans[i]<ans[i-1]&&ans[i]<ans[i+1]){
+            continue;
+        }else{
+            cout<<"NO"<<'\n';
+            return;
+        }
+    }
     cout<<"YES"<<'\n';
     for(auto k: ans){
         cout<<k<<" ";
     }
     cout<<'\n';
+
 }
 
 signed main(){
