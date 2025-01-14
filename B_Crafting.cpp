@@ -1,87 +1,48 @@
-// Mohit Verma "mohitvdx"
-// problem: 
-
 #include <bits/stdc++.h>
-
-#define int long long
 using namespace std;
 
-const int MOD = 1e9 + 7;
-const int INF = LLONG_MAX >> 1;
+#define int long long 
 
-void solve(){
+
+void solve() {
     int n;
-    cin>>n;
+    cin >> n;
 
-    vector<int> a(n);
-    vector<int> b(n);
-    int sum1=0;
-    int sum2=0;
+    vector<int> a(n), b(n);
+    int total_a = 0, total_b = 0;
+    int mismatch_count = 0, need = 0, surplus = INT_MAX;
 
-    for(int i=0; i<n; i++) {
-        cin>>a[i];
-        sum1+=a[i];
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        total_a += a[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+        cin >> b[i];
+        total_b += b[i];
+        if (b[i] > a[i]) {
+            mismatch_count++;
+            need = max(need, b[i] - a[i]); // Track the largest deficit
+        } else {
+            surplus = min(surplus, a[i] - b[i]); // Track the smallest surplus
         }
+    }
 
-    for(int i=0; i<n; i++) {
-        cin>>b[i];
-        sum2+=b[i];
-        }
-
-        if(sum1<=sum2){
-            cout<<"NO"<<'\n';
-            return;
-        }
-
-        vector<int> diff(n);
-
-        for(int i=0; i<n; i++){
-            diff[i] = b[i]-a[i];
-        }
-
-        int minpositive=INT_MIN;
-        int maxindex;
-        int minindex;
-        int count=0;
-
-        int maxi = INT_MIN;
-        int mini = INT_MAX;
-
-        for(int i=0; i<n; i++){
-            
-            if(diff[i]>0 && diff[i]<minpositive){
-                minpositive = diff[i];
-                count++;
-            }
-
-            if(diff[i]>maxi){
-                maxi = diff[i];
-                maxindex = i;
-            }
-            if(diff[i]<mini){
-                mini = diff[i];
-                minindex = i;
-            }
-        }
-
-        if(abs(mini)>minpositive*count){
-            cout<<"YES"<<'\n';
-        }else{
-            cout<<"NO"<<'\n';
-        }
-
-
-}
-
-signed main(){
-    ios::sync_with_stdio(false); cin.tie(NULL); // fast IO
-
-    int t; cin>>t;
-    while(t--){
-        solve();
+    // Check conditions
+    if (mismatch_count > 1 || total_b > total_a || need > surplus) {
+        cout << "NO\n";
+    } else {
+        cout << "YES\n";
     }
 }
 
-/*
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
 
-*/
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+}
