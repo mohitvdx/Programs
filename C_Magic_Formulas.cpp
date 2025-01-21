@@ -28,10 +28,10 @@ void solve(){
 
 
     for (int i = 0; i < n; i++) {
-        int segment = n / (i + 1); 
+        int segment = n / (i + 1); // number of repeating segment in the xor 
         int left = n % (i + 1);    
 
-        if (segment % 2) {
+        if (segment % 2 !=0 ) {
             ans ^= presum[i];
         }
 
