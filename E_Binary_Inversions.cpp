@@ -10,10 +10,14 @@ const int MOD = 1e9 + 7;
 const int INF = LLONG_MAX >> 1;
 
 int calc(vector<int>& a) {
-    int zeroes = 0, ans = 0;
-    for (int i = (int)a.size() - 1; i >= 0; --i) {
-        if (a[i] == 0) ++zeroes;
-        else ans += zeroes;
+    int ones=0; int ans=0;
+
+    for(int i=0; i<a.size(); i++){
+        if(a[i]==1){
+            ones++;
+        }else{
+            ans+=ones;
+        }
     }
     return ans;
 }
